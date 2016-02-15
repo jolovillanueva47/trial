@@ -46,10 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="condorDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>condorDatabaseDataSet.xsd</DependentUpon>
+    <Compile Include="condorDatabaseDataSet1.cs">
+      <DependentUpon>condorDatabaseDataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="condorDatabaseDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -104,17 +103,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="app.config" />
-    <None Include="condorDatabaseDataSet.xsc">
-      <DependentUpon>condorDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="condorDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>condorDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="condorDatabaseDataSet.xss">
-      <DependentUpon>condorDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="condorDatabaseDataSet1.xsc">
       <DependentUpon>condorDatabaseDataSet1.xsd</DependentUpon>
     </None>

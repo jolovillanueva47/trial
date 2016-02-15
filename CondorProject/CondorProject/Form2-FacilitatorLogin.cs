@@ -16,9 +16,9 @@ namespace CondorProject
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            if ((int)facilitatorTableAdapter.LoginQuery(txtBox_userName.Text, txtBox_password.Text) == 1)
+            if ((int)facilitatorTableAdapter.LoginQuery(txtBoxUserName.Text, txtBoxPassword.Text) == 1)
             {
                 this.Hide();
                 Form3_VisitorRegistration form3 = new Form3_VisitorRegistration();
@@ -27,9 +27,8 @@ namespace CondorProject
             }
             else
             {
-                MessageBox.Show("Login Failed!");
+                MessageBox.Show("Invalid Login Details!");
             }
-
         }
 
 
@@ -40,13 +39,8 @@ namespace CondorProject
 
         private void Form2_FacilitatorLogin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'condorDatabaseDataSet1.Facilitator' table. You can move, or remove it, as needed.
-            this.facilitatorTableAdapter.Fill(this.condorDatabaseDataSet1.Facilitator);
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
+            // TODO: This line of code loads data into the 'condorDatabaseDataSet.Facilitator' table. You can move, or remove it, as needed.
+            this.facilitatorTableAdapter.Fill(this.condorDatabaseDataSet.Facilitator);
 
         }
 
