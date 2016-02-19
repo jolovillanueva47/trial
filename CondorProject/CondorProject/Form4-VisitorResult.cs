@@ -41,24 +41,21 @@ namespace CondorProject
         private void Form4_VisitorResult_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'condorDatabaseDataSet.Visitor' table. You can move, or remove it, as needed.
-            this.visitorTableAdapter.Fill(this.condorDatabaseDataSet.Visitor);
 
             Timer tmr = new Timer();
             tmr.Interval = 1000;//ticks every 1 second
             tmr.Tick += new EventHandler(displayTime);
             tmr.Start();
+            
+            this.visitorTableAdapter.Fill(this.condorDatabaseDataSet.Visitor);
 
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            this.visitorTableAdapter.GetDataBy2(txtboxSearch.Text);
-            this.visitorTableAdapter.FillBy1(this.condorDatabaseDataSet.Visitor, txtboxSearch.Text);
+            this.visitorTableAdapter.GetDataBy(txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
+            this.visitorTableAdapter.FillBy(this.condorDatabaseDataSet.Visitor, txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
             txtboxSearch.Text = "";
-            //this.Hide();
-            //Form5_ViewSearch form5 = new Form5_ViewSearch();
-            //form5.Closed += (s, args) => this.Close();
-            //form5.Show();
         }
 
 
@@ -86,6 +83,42 @@ namespace CondorProject
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Int32 selectedRowCount = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
+
+            if (selectedRowCount == 1)
+            {
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    this.Hide();
+                    Form5_UpdateEntry form5 = new Form5_UpdateEntry(row.Cells[0].Value.ToString());
+                    form5.Closed += (s, args) => this.Close();
+                    form5.Show();
+                }
+            }
+            else if (selectedRowCount == 0)
+            {
+                MessageBox.Show("Please select a row to update.");
+            }
+            else
+            {
+                MessageBox.Show("Please select only one row to update.");
+            }
+        }
+
+        private void Form4_VisitorResult_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+                //TODO Facilitator credential validation for closing. (Another form for closing the program)
+                //do not hide the previous form. just overlap with logout and disable.
+        }
+
+        private void btnTimeOut_Click(object sender, EventArgs e)
+        {
+            //will update timeout and also move row from datagridview1 to datagridview2
         }
 
     }

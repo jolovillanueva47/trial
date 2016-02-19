@@ -16,7 +16,6 @@ namespace CondorProject
         {
             InitializeComponent();
             this.id = id;
-
         }
 
         public Form3_VisitorRegistration()
@@ -69,31 +68,16 @@ namespace CondorProject
             return check;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (isValidated() == true)
+            if (isValidated())
             {
-                visitorTableAdapter.InsertQuery(txtBoxFirstName.Text, txtBoxLastName.Text, cmbBoxGender.Text, txtBoxRelation.Text, txtBoxPurpose.Text, lblDateAndTimeEntry.Text, id);
+                visitorTableAdapter.InsertQuery(txtBoxFirstName.Text, txtBoxLastName.Text, cmbBoxGender.Text, txtBoxUnitNumber.Text, txtBoxRelation.Text, txtBoxPurpose.Text, lblDateAndTimeEntry.Text, id);
                 this.Hide();
                 Form4_VisitorResult form4 = new Form4_VisitorResult();
                 form4.Closed += (s, args) => this.Close();
                 form4.Show();
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Form3_VisitorRegistration_Load(object sender, EventArgs e)
@@ -120,7 +104,7 @@ namespace CondorProject
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnViewList_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form4_VisitorResult form4 = new Form4_VisitorResult();
