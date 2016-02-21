@@ -38,46 +38,46 @@
             this.txtboxSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.unitNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnTimeOut = new System.Windows.Forms.Button();
+            this.lblDateAndTime = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.visitorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.condorDatabaseDataSet = new CondorProject.condorDatabaseDataSet();
             this.idVisitorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDetailsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.visitorRelationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.purposeOfVisitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeInDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeOutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idFacilitatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idOwner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.visitorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.condorDatabaseDataSet = new CondorProject.condorDatabaseDataSet();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnTimeOut = new System.Windows.Forms.Button();
-            this.lblDateAndTime = new System.Windows.Forms.Label();
             this.visitorTableAdapter = new CondorProject.condorDatabaseDataSetTableAdapters.VisitorTableAdapter();
             this.condorDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new CondorProject.condorDatabaseDataSetTableAdapters.TableAdapterManager();
-            this.unitID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facilitatorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.purpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.relation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDetails = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unitNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.visitorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idVisitorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDetailsDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visitorRelationDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.purposeOfVisitDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeInDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeOutDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idOwnerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idFacilitatorDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.condorDatabaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.condorDatabaseDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -204,38 +204,6 @@
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // idVisitorDataGridViewTextBoxColumn
-            // 
-            this.idVisitorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idVisitorDataGridViewTextBoxColumn.DataPropertyName = "idVisitor";
-            this.idVisitorDataGridViewTextBoxColumn.HeaderText = "Visitor ID";
-            this.idVisitorDataGridViewTextBoxColumn.Name = "idVisitorDataGridViewTextBoxColumn";
-            this.idVisitorDataGridViewTextBoxColumn.Width = 82;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.Width = 93;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.Width = 93;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.Width = 81;
-            // 
             // unitNumber
             // 
             this.unitNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -244,53 +212,6 @@
             this.unitNumber.Name = "unitNumber";
             this.unitNumber.Width = 58;
             // 
-            // idDetailsDataGridViewTextBoxColumn
-            // 
-            this.idDetailsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idDetailsDataGridViewTextBoxColumn.DataPropertyName = "idDetails";
-            this.idDetailsDataGridViewTextBoxColumn.HeaderText = "ID Details";
-            this.idDetailsDataGridViewTextBoxColumn.Name = "idDetailsDataGridViewTextBoxColumn";
-            this.idDetailsDataGridViewTextBoxColumn.Width = 86;
-            // 
-            // visitorRelationDataGridViewTextBoxColumn
-            // 
-            this.visitorRelationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.visitorRelationDataGridViewTextBoxColumn.DataPropertyName = "visitorRelation";
-            this.visitorRelationDataGridViewTextBoxColumn.HeaderText = "Visitor Relation";
-            this.visitorRelationDataGridViewTextBoxColumn.Name = "visitorRelationDataGridViewTextBoxColumn";
-            this.visitorRelationDataGridViewTextBoxColumn.Width = 117;
-            // 
-            // purposeOfVisitDataGridViewTextBoxColumn
-            // 
-            this.purposeOfVisitDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.purposeOfVisitDataGridViewTextBoxColumn.DataPropertyName = "purposeOfVisit";
-            this.purposeOfVisitDataGridViewTextBoxColumn.HeaderText = "Purpose Of Visit";
-            this.purposeOfVisitDataGridViewTextBoxColumn.Name = "purposeOfVisitDataGridViewTextBoxColumn";
-            // 
-            // timeInDataGridViewTextBoxColumn
-            // 
-            this.timeInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.timeInDataGridViewTextBoxColumn.DataPropertyName = "timeIn";
-            this.timeInDataGridViewTextBoxColumn.HeaderText = "Time In";
-            this.timeInDataGridViewTextBoxColumn.Name = "timeInDataGridViewTextBoxColumn";
-            this.timeInDataGridViewTextBoxColumn.Width = 73;
-            // 
-            // timeOutDataGridViewTextBoxColumn
-            // 
-            this.timeOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.timeOutDataGridViewTextBoxColumn.DataPropertyName = "timeOut";
-            this.timeOutDataGridViewTextBoxColumn.HeaderText = "Time Out";
-            this.timeOutDataGridViewTextBoxColumn.Name = "timeOutDataGridViewTextBoxColumn";
-            this.timeOutDataGridViewTextBoxColumn.Width = 84;
-            // 
-            // idFacilitatorDataGridViewTextBoxColumn
-            // 
-            this.idFacilitatorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idFacilitatorDataGridViewTextBoxColumn.DataPropertyName = "idFacilitator";
-            this.idFacilitatorDataGridViewTextBoxColumn.HeaderText = "Facilitator ID";
-            this.idFacilitatorDataGridViewTextBoxColumn.Name = "idFacilitatorDataGridViewTextBoxColumn";
-            this.idFacilitatorDataGridViewTextBoxColumn.Width = 102;
-            // 
             // idOwner
             // 
             this.idOwner.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -298,16 +219,6 @@
             this.idOwner.HeaderText = "Unit ID";
             this.idOwner.Name = "idOwner";
             this.idOwner.Width = 58;
-            // 
-            // visitorBindingSource
-            // 
-            this.visitorBindingSource.DataMember = "Visitor";
-            this.visitorBindingSource.DataSource = this.condorDatabaseDataSet;
-            // 
-            // condorDatabaseDataSet
-            // 
-            this.condorDatabaseDataSet.DataSetName = "condorDatabaseDataSet";
-            this.condorDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnUpdate
             // 
@@ -352,6 +263,128 @@
             this.lblDateAndTime.Text = "MM/dd/yyyy hh:mm:ss tt";
             this.lblDateAndTime.Click += new System.EventHandler(this.label1_Click);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.MistyRose;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idVisitorDataGridViewTextBoxColumn1,
+            this.firstNameDataGridViewTextBoxColumn1,
+            this.lastNameDataGridViewTextBoxColumn1,
+            this.genderDataGridViewTextBoxColumn1,
+            this.unitNumberDataGridViewTextBoxColumn,
+            this.idDetailsDataGridViewTextBoxColumn1,
+            this.visitorRelationDataGridViewTextBoxColumn1,
+            this.purposeOfVisitDataGridViewTextBoxColumn1,
+            this.timeInDataGridViewTextBoxColumn1,
+            this.timeOutDataGridViewTextBoxColumn1,
+            this.idOwnerDataGridViewTextBoxColumn,
+            this.idFacilitatorDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.visitorBindingSource;
+            this.dataGridView2.GridColor = System.Drawing.Color.Salmon;
+            this.dataGridView2.Location = new System.Drawing.Point(64, 384);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(1140, 256);
+            this.dataGridView2.TabIndex = 37;
+            // 
+            // visitorBindingSource
+            // 
+            this.visitorBindingSource.DataMember = "Visitor";
+            this.visitorBindingSource.DataSource = this.condorDatabaseDataSet;
+            // 
+            // condorDatabaseDataSet
+            // 
+            this.condorDatabaseDataSet.DataSetName = "condorDatabaseDataSet";
+            this.condorDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // idVisitorDataGridViewTextBoxColumn
+            // 
+            this.idVisitorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idVisitorDataGridViewTextBoxColumn.DataPropertyName = "idVisitor";
+            this.idVisitorDataGridViewTextBoxColumn.HeaderText = "Visitor ID";
+            this.idVisitorDataGridViewTextBoxColumn.Name = "idVisitorDataGridViewTextBoxColumn";
+            this.idVisitorDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "firstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "lastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.Width = 81;
+            // 
+            // idDetailsDataGridViewTextBoxColumn
+            // 
+            this.idDetailsDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idDetailsDataGridViewTextBoxColumn.DataPropertyName = "idDetails";
+            this.idDetailsDataGridViewTextBoxColumn.HeaderText = "ID Details";
+            this.idDetailsDataGridViewTextBoxColumn.Name = "idDetailsDataGridViewTextBoxColumn";
+            this.idDetailsDataGridViewTextBoxColumn.Width = 93;
+            // 
+            // visitorRelationDataGridViewTextBoxColumn
+            // 
+            this.visitorRelationDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.visitorRelationDataGridViewTextBoxColumn.DataPropertyName = "visitorRelation";
+            this.visitorRelationDataGridViewTextBoxColumn.HeaderText = "Visitor Relation";
+            this.visitorRelationDataGridViewTextBoxColumn.Name = "visitorRelationDataGridViewTextBoxColumn";
+            this.visitorRelationDataGridViewTextBoxColumn.Width = 117;
+            // 
+            // purposeOfVisitDataGridViewTextBoxColumn
+            // 
+            this.purposeOfVisitDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.purposeOfVisitDataGridViewTextBoxColumn.DataPropertyName = "purposeOfVisit";
+            this.purposeOfVisitDataGridViewTextBoxColumn.HeaderText = "Purpose Of Visit";
+            this.purposeOfVisitDataGridViewTextBoxColumn.Name = "purposeOfVisitDataGridViewTextBoxColumn";
+            // 
+            // timeInDataGridViewTextBoxColumn
+            // 
+            this.timeInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.timeInDataGridViewTextBoxColumn.DataPropertyName = "timeIn";
+            this.timeInDataGridViewTextBoxColumn.HeaderText = "Time In";
+            this.timeInDataGridViewTextBoxColumn.Name = "timeInDataGridViewTextBoxColumn";
+            this.timeInDataGridViewTextBoxColumn.Width = 73;
+            // 
+            // timeOutDataGridViewTextBoxColumn
+            // 
+            this.timeOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.timeOutDataGridViewTextBoxColumn.DataPropertyName = "timeOut";
+            this.timeOutDataGridViewTextBoxColumn.HeaderText = "Time Out";
+            this.timeOutDataGridViewTextBoxColumn.Name = "timeOutDataGridViewTextBoxColumn";
+            this.timeOutDataGridViewTextBoxColumn.Width = 84;
+            // 
+            // idFacilitatorDataGridViewTextBoxColumn
+            // 
+            this.idFacilitatorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idFacilitatorDataGridViewTextBoxColumn.DataPropertyName = "idFacilitator";
+            this.idFacilitatorDataGridViewTextBoxColumn.HeaderText = "Facilitator ID";
+            this.idFacilitatorDataGridViewTextBoxColumn.Name = "idFacilitatorDataGridViewTextBoxColumn";
+            this.idFacilitatorDataGridViewTextBoxColumn.Width = 102;
+            // 
             // visitorTableAdapter
             // 
             this.visitorTableAdapter.ClearBeforeFill = true;
@@ -370,120 +403,77 @@
             this.tableAdapterManager.UpdateOrder = CondorProject.condorDatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VisitorTableAdapter = null;
             // 
-            // unitID
+            // idVisitorDataGridViewTextBoxColumn1
             // 
-            this.unitID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.unitID.HeaderText = "Unit ID";
-            this.unitID.Name = "unitID";
-            this.unitID.Width = 58;
+            this.idVisitorDataGridViewTextBoxColumn1.DataPropertyName = "idVisitor";
+            this.idVisitorDataGridViewTextBoxColumn1.HeaderText = "idVisitor";
+            this.idVisitorDataGridViewTextBoxColumn1.Name = "idVisitorDataGridViewTextBoxColumn1";
             // 
-            // facilitatorID
+            // firstNameDataGridViewTextBoxColumn1
             // 
-            this.facilitatorID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.facilitatorID.HeaderText = "Facilitator ID";
-            this.facilitatorID.Name = "facilitatorID";
-            this.facilitatorID.Width = 102;
+            this.firstNameDataGridViewTextBoxColumn1.DataPropertyName = "firstName";
+            this.firstNameDataGridViewTextBoxColumn1.HeaderText = "firstName";
+            this.firstNameDataGridViewTextBoxColumn1.Name = "firstNameDataGridViewTextBoxColumn1";
             // 
-            // timeOut
+            // lastNameDataGridViewTextBoxColumn1
             // 
-            this.timeOut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.timeOut.HeaderText = "Time Out";
-            this.timeOut.Name = "timeOut";
-            this.timeOut.Width = 84;
+            this.lastNameDataGridViewTextBoxColumn1.DataPropertyName = "lastName";
+            this.lastNameDataGridViewTextBoxColumn1.HeaderText = "lastName";
+            this.lastNameDataGridViewTextBoxColumn1.Name = "lastNameDataGridViewTextBoxColumn1";
             // 
-            // timeIn
+            // genderDataGridViewTextBoxColumn1
             // 
-            this.timeIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.timeIn.HeaderText = "Time In";
-            this.timeIn.Name = "timeIn";
-            this.timeIn.Width = 73;
+            this.genderDataGridViewTextBoxColumn1.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn1.HeaderText = "gender";
+            this.genderDataGridViewTextBoxColumn1.Name = "genderDataGridViewTextBoxColumn1";
             // 
-            // purpose
+            // unitNumberDataGridViewTextBoxColumn
             // 
-            this.purpose.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.purpose.HeaderText = "Purpose of Visit";
-            this.purpose.Name = "purpose";
-            this.purpose.Width = 97;
+            this.unitNumberDataGridViewTextBoxColumn.DataPropertyName = "unitNumber";
+            this.unitNumberDataGridViewTextBoxColumn.HeaderText = "unitNumber";
+            this.unitNumberDataGridViewTextBoxColumn.Name = "unitNumberDataGridViewTextBoxColumn";
             // 
-            // relation
+            // idDetailsDataGridViewTextBoxColumn1
             // 
-            this.relation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.relation.HeaderText = "Visitor Relation";
-            this.relation.Name = "relation";
-            this.relation.Width = 117;
+            this.idDetailsDataGridViewTextBoxColumn1.DataPropertyName = "idDetails";
+            this.idDetailsDataGridViewTextBoxColumn1.HeaderText = "idDetails";
+            this.idDetailsDataGridViewTextBoxColumn1.Name = "idDetailsDataGridViewTextBoxColumn1";
             // 
-            // idDetails
+            // visitorRelationDataGridViewTextBoxColumn1
             // 
-            this.idDetails.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idDetails.HeaderText = "ID Details";
-            this.idDetails.Name = "idDetails";
-            this.idDetails.Width = 86;
+            this.visitorRelationDataGridViewTextBoxColumn1.DataPropertyName = "visitorRelation";
+            this.visitorRelationDataGridViewTextBoxColumn1.HeaderText = "visitorRelation";
+            this.visitorRelationDataGridViewTextBoxColumn1.Name = "visitorRelationDataGridViewTextBoxColumn1";
             // 
-            // unitNum
+            // purposeOfVisitDataGridViewTextBoxColumn1
             // 
-            this.unitNum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.unitNum.HeaderText = "Unit";
-            this.unitNum.Name = "unitNum";
-            this.unitNum.Width = 58;
+            this.purposeOfVisitDataGridViewTextBoxColumn1.DataPropertyName = "purposeOfVisit";
+            this.purposeOfVisitDataGridViewTextBoxColumn1.HeaderText = "purposeOfVisit";
+            this.purposeOfVisitDataGridViewTextBoxColumn1.Name = "purposeOfVisitDataGridViewTextBoxColumn1";
             // 
-            // gender
+            // timeInDataGridViewTextBoxColumn1
             // 
-            this.gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.Width = 81;
+            this.timeInDataGridViewTextBoxColumn1.DataPropertyName = "timeIn";
+            this.timeInDataGridViewTextBoxColumn1.HeaderText = "timeIn";
+            this.timeInDataGridViewTextBoxColumn1.Name = "timeInDataGridViewTextBoxColumn1";
             // 
-            // lastName
+            // timeOutDataGridViewTextBoxColumn1
             // 
-            this.lastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.lastName.HeaderText = "Last Name";
-            this.lastName.Name = "lastName";
-            this.lastName.Width = 93;
+            this.timeOutDataGridViewTextBoxColumn1.DataPropertyName = "timeOut";
+            this.timeOutDataGridViewTextBoxColumn1.HeaderText = "timeOut";
+            this.timeOutDataGridViewTextBoxColumn1.Name = "timeOutDataGridViewTextBoxColumn1";
             // 
-            // firstName
+            // idOwnerDataGridViewTextBoxColumn
             // 
-            this.firstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.firstName.HeaderText = "First Name";
-            this.firstName.Name = "firstName";
-            this.firstName.Width = 93;
+            this.idOwnerDataGridViewTextBoxColumn.DataPropertyName = "idOwner";
+            this.idOwnerDataGridViewTextBoxColumn.HeaderText = "idOwner";
+            this.idOwnerDataGridViewTextBoxColumn.Name = "idOwnerDataGridViewTextBoxColumn";
             // 
-            // visitorId
+            // idFacilitatorDataGridViewTextBoxColumn1
             // 
-            this.visitorId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.visitorId.HeaderText = "Visitor ID";
-            this.visitorId.Name = "visitorId";
-            this.visitorId.Width = 82;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToResizeRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.MistyRose;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.visitorId,
-            this.firstName,
-            this.lastName,
-            this.gender,
-            this.unitNum,
-            this.idDetails,
-            this.relation,
-            this.purpose,
-            this.timeIn,
-            this.timeOut,
-            this.facilitatorID,
-            this.unitID});
-            this.dataGridView2.GridColor = System.Drawing.Color.Salmon;
-            this.dataGridView2.Location = new System.Drawing.Point(64, 384);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1140, 256);
-            this.dataGridView2.TabIndex = 37;
+            this.idFacilitatorDataGridViewTextBoxColumn1.DataPropertyName = "idFacilitator";
+            this.idFacilitatorDataGridViewTextBoxColumn1.HeaderText = "idFacilitator";
+            this.idFacilitatorDataGridViewTextBoxColumn1.Name = "idFacilitatorDataGridViewTextBoxColumn1";
             // 
             // Form4_VisitorResult
             // 
@@ -514,10 +504,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.condorDatabaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.condorDatabaseDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,18 +543,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn timeOutDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idFacilitatorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idOwner;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unitID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn facilitatorID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeOut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeIn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn purpose;
-        private System.Windows.Forms.DataGridViewTextBoxColumn relation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDetails;
-        private System.Windows.Forms.DataGridViewTextBoxColumn unitNum;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn visitorId;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idVisitorDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unitNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDetailsDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn visitorRelationDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn purposeOfVisitDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeInDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeOutDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idOwnerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idFacilitatorDataGridViewTextBoxColumn1;
     }
 }

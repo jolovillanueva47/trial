@@ -53,7 +53,7 @@ namespace CondorProject
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            this.visitorTableAdapter.GetDataBy(txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
+            this.visitorTableAdapter.GetDataBy1(txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
             this.visitorTableAdapter.FillBy(this.condorDatabaseDataSet.Visitor, txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
             txtboxSearch.Text = "";
         }
@@ -119,6 +119,19 @@ namespace CondorProject
         private void btnTimeOut_Click(object sender, EventArgs e)
         {
             //will update timeout and also move row from datagridview1 to datagridview2
+        }
+
+        private void fillOutVisitorToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.visitorTableAdapter.FillOutVisitor(this.condorDatabaseDataSet.Visitor);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
 
     }

@@ -36,6 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtBoxPurpose = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblVisitorID = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.txtboxIdDetails = new System.Windows.Forms.TextBox();
@@ -54,8 +56,6 @@
             this.visitorTableAdapter = new CondorProject.condorDatabaseDataSetTableAdapters.VisitorTableAdapter();
             this.tableAdapterManager = new CondorProject.condorDatabaseDataSetTableAdapters.TableAdapterManager();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.lblVisitorID = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.visitorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.condorDatabaseDataSet)).BeginInit();
@@ -136,6 +136,31 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Visitor\'s Details";
+            // 
+            // lblVisitorID
+            // 
+            this.lblVisitorID.AutoSize = true;
+            this.lblVisitorID.BackColor = System.Drawing.Color.Salmon;
+            this.lblVisitorID.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisitorID.Location = new System.Drawing.Point(156, 25);
+            this.lblVisitorID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVisitorID.Name = "lblVisitorID";
+            this.lblVisitorID.Size = new System.Drawing.Size(62, 26);
+            this.lblVisitorID.TabIndex = 39;
+            this.lblVisitorID.Text = "00000";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Salmon;
+            this.label5.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Maroon;
+            this.label5.Location = new System.Drawing.Point(25, 25);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(196, 26);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Visitor ID     :            ";
             // 
             // btnUpdate
             // 
@@ -245,6 +270,7 @@
             // 
             // cmbBoxGender
             // 
+            this.cmbBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxGender.FormattingEnabled = true;
             this.cmbBoxGender.Items.AddRange(new object[] {
             "Male",
@@ -325,31 +351,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // lblVisitorID
-            // 
-            this.lblVisitorID.AutoSize = true;
-            this.lblVisitorID.BackColor = System.Drawing.Color.Salmon;
-            this.lblVisitorID.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVisitorID.Location = new System.Drawing.Point(156, 25);
-            this.lblVisitorID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblVisitorID.Name = "lblVisitorID";
-            this.lblVisitorID.Size = new System.Drawing.Size(62, 26);
-            this.lblVisitorID.TabIndex = 39;
-            this.lblVisitorID.Text = "00000";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Salmon;
-            this.label5.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Maroon;
-            this.label5.Location = new System.Drawing.Point(25, 25);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(196, 26);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Visitor ID     :            ";
             // 
             // Form5_UpdateEntry
             // 
