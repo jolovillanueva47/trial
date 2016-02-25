@@ -67,6 +67,12 @@
     <Compile Include="Form2-FacilitatorLogin.Designer.cs">
       <DependentUpon>Form2-FacilitatorLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form6-FacilitatorListResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6-FacilitatorListResult.Designer.cs">
+      <DependentUpon>Form6-FacilitatorListResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3-VisitorRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     <Compile Include="Form5-UpdateEntry.Designer.cs">
       <DependentUpon>Form5-UpdateEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form7-FacilitatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7-FacilitatorForm.Designer.cs">
+      <DependentUpon>Form7-FacilitatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1-Welcome.resx">
@@ -92,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2-FacilitatorLogin.resx">
       <DependentUpon>Form2-FacilitatorLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6-FacilitatorListResult.resx">
+      <DependentUpon>Form6-FacilitatorListResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3-VisitorRegistration.resx">
       <DependentUpon>Form3-VisitorRegistration.cs</DependentUpon>
@@ -101,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5-UpdateEntry.resx">
       <DependentUpon>Form5-UpdateEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7-FacilitatorForm.resx">
+      <DependentUpon>Form7-FacilitatorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
