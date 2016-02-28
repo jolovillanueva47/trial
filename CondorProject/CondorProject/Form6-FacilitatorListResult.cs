@@ -23,5 +23,13 @@ namespace CondorProject
             form7.Closed += (s, args) => this.Close();
             form7.Show();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form8_UpdateFacilitator form8 = new Form8_UpdateFacilitator();
+            form8.Closed += (s, args) => this.Close();
+            form8.Show();
+        }
     }
 }
