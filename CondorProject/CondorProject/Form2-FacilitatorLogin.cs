@@ -26,9 +26,7 @@ namespace CondorProject
                 Form3_VisitorRegistration form3 = new Form3_VisitorRegistration(id);
                 form3.Closed += (s, args) => this.Close();
                 form3.Show();
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Invalid Login Details!");
             }
         }

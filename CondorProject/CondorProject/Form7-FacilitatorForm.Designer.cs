@@ -30,9 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7_CreateFacilitator));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblDateAndTimeEntry = new System.Windows.Forms.Label();
             this.txtBoxPurpose = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtBoxRelation = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbBoxGender = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,10 +49,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBoxRelation = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,25 @@
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Facilitator Detalis";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(181, 226);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(237, 20);
+            this.textBox1.TabIndex = 38;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Turquoise;
+            this.label6.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label6.Location = new System.Drawing.Point(18, 224);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(221, 21);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "Confirm Password     :            ";
             // 
             // lblDateAndTimeEntry
             // 
@@ -108,6 +127,25 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "Password     :            ";
             // 
+            // txtBoxRelation
+            // 
+            this.txtBoxRelation.Location = new System.Drawing.Point(123, 165);
+            this.txtBoxRelation.Name = "txtBoxRelation";
+            this.txtBoxRelation.Size = new System.Drawing.Size(238, 20);
+            this.txtBoxRelation.TabIndex = 25;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Turquoise;
+            this.label8.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label8.Location = new System.Drawing.Point(18, 164);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(164, 21);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Username     :            ";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -127,7 +165,7 @@
             this.cmbBoxGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbBoxGender.Location = new System.Drawing.Point(119, 121);
+            this.cmbBoxGender.Location = new System.Drawing.Point(121, 121);
             this.cmbBoxGender.Name = "cmbBoxGender";
             this.cmbBoxGender.Size = new System.Drawing.Size(121, 21);
             this.cmbBoxGender.TabIndex = 16;
@@ -198,7 +236,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(298, 475);
+            this.button1.Location = new System.Drawing.Point(293, 475);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(204, 36);
             this.button1.TabIndex = 40;
@@ -242,44 +280,6 @@
             this.label3.Size = new System.Drawing.Size(441, 51);
             this.label3.TabIndex = 43;
             this.label3.Text = "Facilitator Account Form";
-            // 
-            // txtBoxRelation
-            // 
-            this.txtBoxRelation.Location = new System.Drawing.Point(122, 166);
-            this.txtBoxRelation.Name = "txtBoxRelation";
-            this.txtBoxRelation.Size = new System.Drawing.Size(238, 20);
-            this.txtBoxRelation.TabIndex = 25;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Turquoise;
-            this.label8.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label8.Location = new System.Drawing.Point(18, 164);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 21);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Username     :            ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(181, 226);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 20);
-            this.textBox1.TabIndex = 38;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Turquoise;
-            this.label6.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label6.Location = new System.Drawing.Point(18, 224);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(221, 21);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "Confirm Password     :            ";
             // 
             // Form7_CreateFacilitator
             // 
