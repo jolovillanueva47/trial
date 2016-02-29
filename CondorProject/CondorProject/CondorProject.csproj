@@ -67,11 +67,11 @@
     <Compile Include="Form2-FacilitatorLogin.Designer.cs">
       <DependentUpon>Form2-FacilitatorLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6-FacilitatorListResult.cs">
+    <Compile Include="Form6-FacilitatorList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6-FacilitatorListResult.Designer.cs">
-      <DependentUpon>Form6-FacilitatorListResult.cs</DependentUpon>
+    <Compile Include="Form6-FacilitatorList.Designer.cs">
+      <DependentUpon>Form6-FacilitatorList.cs</DependentUpon>
     </Compile>
     <Compile Include="Form3-VisitorRegistration.cs">
       <SubType>Form</SubType>
@@ -79,11 +79,11 @@
     <Compile Include="Form3-VisitorRegistration.Designer.cs">
       <DependentUpon>Form3-VisitorRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4-VisitorResult.cs">
+    <Compile Include="Form4-VisitorListResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4-VisitorResult.Designer.cs">
-      <DependentUpon>Form4-VisitorResult.cs</DependentUpon>
+    <Compile Include="Form4-VisitorListResult.Designer.cs">
+      <DependentUpon>Form4-VisitorListResult.cs</DependentUpon>
     </Compile>
     <Compile Include="Form5-UpdateEntry.cs">
       <SubType>Form</SubType>
@@ -111,14 +111,14 @@
     <EmbeddedResource Include="Form2-FacilitatorLogin.resx">
       <DependentUpon>Form2-FacilitatorLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6-FacilitatorListResult.resx">
-      <DependentUpon>Form6-FacilitatorListResult.cs</DependentUpon>
+    <EmbeddedResource Include="Form6-FacilitatorList.resx">
+      <DependentUpon>Form6-FacilitatorList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3-VisitorRegistration.resx">
       <DependentUpon>Form3-VisitorRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4-VisitorResult.resx">
-      <DependentUpon>Form4-VisitorResult.cs</DependentUpon>
+    <EmbeddedResource Include="Form4-VisitorListResult.resx">
+      <DependentUpon>Form4-VisitorListResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form5-UpdateEntry.resx">
       <DependentUpon>Form5-UpdateEntry.cs</DependentUpon>
