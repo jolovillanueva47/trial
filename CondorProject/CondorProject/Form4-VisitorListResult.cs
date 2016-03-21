@@ -1,30 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace CondorProject
 {
     public partial class Form4_VisitorListResult : Form
     {
+        int id;
         public Form4_VisitorListResult()
         {
             InitializeComponent();
         }
 
+        public Form4_VisitorListResult(int id)
+        {
+            InitializeComponent();
+            this.id = id;
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = System.Windows.Forms.MessageBox.Show("Are you sure you want to Log-out?", "Log-out Confirmation", MessageBoxButtons.YesNo);
-
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to Log-out?", "Log-out Confirmation", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)  // error is here
             {
-                this.Hide();
+                Hide();
                 Form2_FacilitatorLogin form2 = new Form2_FacilitatorLogin();
-                form2.Closed += (s, args) => this.Close();
+                form2.Closed += (s, args) => Close();
                 form2.Show();
             }
 
@@ -32,41 +36,39 @@ namespace CondorProject
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-                this.Hide();
-                Form3_VisitorRegistration form3 = new Form3_VisitorRegistration();
-                form3.Closed += (s, args) => this.Close();
-                form3.Show();
+            Hide();
+            Form3_VisitorRegistration form3 = new Form3_VisitorRegistration(this.id);
+            form3.Closed += (s, args) => Close();
+            form3.Show();
         }
 
         private void Form4_VisitorResult_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'condorDatabaseDataSet.Visitor' table. You can move, or remove it, as needed.
-
             Timer tmr = new Timer();
-            tmr.Interval = 1000;//ticks every 1 second
+            tmr.Interval = 1000;
             tmr.Tick += new EventHandler(displayTime);
             tmr.Start();
             
-            this.visitorTableAdapter.Fill(this.condorDatabaseDataSet.Visitor);
-
+            this.visitor1TableAdapter.Fill(this.condorDatabaseDataSet.Visitor1);
+            disableTimeOutBtnChecker();
+          
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            this.visitorTableAdapter.GetDataBy1(txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
-            this.visitorTableAdapter.FillBy(this.condorDatabaseDataSet.Visitor, txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
+            visitor1TableAdapter.GetDataBy(txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
+            visitor1TableAdapter.FillBy(condorDatabaseDataSet.Visitor1, txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
             txtboxSearch.Text = "";
         }
 
         private void displayTime(object sender, EventArgs e)
         {
-            lblDateAndTime.Text = DateTime.Now.ToString("MM/dd/yyyy" + " " + "hh:mm:ss tt");
+            lblDateAndTime.Text = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Int32 selectedRowCount = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
-
+            int selectedRowCount = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
             if (selectedRowCount == 0)
             {
                 MessageBox.Show("Please select a row to update.");
@@ -75,10 +77,13 @@ namespace CondorProject
             {
                 foreach (DataGridViewRow row in dataGridView1.SelectedRows)
                 {
+                    MessageBox.Show(dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value.ToString());
+
                     int visitorID = Convert.ToInt32(dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value.ToString());
-                    this.Hide();
-                    Form5_UpdateEntry form5 = new Form5_UpdateEntry(visitorID);
-                    form5.Closed += (s, args) => this.Close();
+
+                    Hide();
+                    Form5_UpdateEntry form5 = new Form5_UpdateEntry(visitorID,this.id);
+                    form5.Closed += (s, args) => Close();
                     form5.Show();
                 }
             }
@@ -93,18 +98,199 @@ namespace CondorProject
         private void btnTimeOut_Click(object sender, EventArgs e)
         {
             int visitorID = Convert.ToInt32(dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value.ToString());
-            string timeOut = this.visitorTableAdapter.GetTimeOutQuery(visitorID);
-            if (string.IsNullOrEmpty(timeOut))
+            visitor1TableAdapter.UpdateTimeOutQuery1(lblDateAndTime.Text, visitorID);
+            visitor1TableAdapter.Fill(condorDatabaseDataSet.Visitor1);
+            MessageBox.Show("Successfully timed out visitor.");
+        }
+
+        private void txtboxSearch_TextChanged(object sender, EventArgs e)
+        {
+            visitor1TableAdapter.GetDataBy(txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
+            visitor1TableAdapter.FillBy(condorDatabaseDataSet.Visitor1, txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text, txtboxSearch.Text);
+            if (txtboxSearch.Text == "")
             {
-                this.visitorTableAdapter.UpdateTimeOutQuery(lblDateAndTime.Text, visitorID);
-                this.visitorTableAdapter.Fill(this.condorDatabaseDataSet.Visitor);
-                
-            }
-            else
-            {
-                MessageBox.Show("The visitor you selected has already timed out.");
+                Form4_VisitorResult_Load(sender, e);
             }
         }
 
+        private void btnSearchClear_Click(object sender, EventArgs e)
+        {
+            txtboxSearch.Text = "";
+            Form4_VisitorResult_Load(sender, e);
+        }
+
+        private void txtboxSearch_Click(object sender, EventArgs e)
+        {
+            txtboxSearch.ForeColor = System.Drawing.Color.Black;
+            txtboxSearch.Text = "";
+        }
+
+        private void btnCreatePDF_Click(object sender, EventArgs e)
+        {
+            Form9_GeneratePDF form9 = new Form9_GeneratePDF();
+            form9.Closed += (s, args) => Close();
+            form9.Show();
+            //exportToPDF(visitor1TableAdapter.GetData());
+            //MessageBox.Show("Print Success.");
+        }
+
+        private void exportToPDF(DataTable dt)
+        {
+            using (Document document = new Document(PageSize.LEDGER, 10, 10, 42, 35))
+            {
+                string title = "System Report (Visitor)_" + DateTime.Now.ToString("yyyyMMdd_hhmmss") + ".pdf";
+                using (PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(title, FileMode.Create)))
+                {
+                    HeaderFooter hf = new HeaderFooter();
+                    writer.SetBoxSize("art", new Rectangle(36, 54, 220, 760));
+                    writer.PageEvent = hf;
+
+                    document.Open();
+
+                    var logo = CondorProject.Properties.Resources.textCondor;
+                    var logoCondor = iTextSharp.text.Image.GetInstance(logo, BaseColor.WHITE);
+                    logoCondor.Alignment = Image.ALIGN_CENTER;
+                    document.Add(logoCondor);
+
+                    Font font5 = FontFactory.GetFont(FontFactory.HELVETICA, 12);
+                    Font font6 = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
+                    Font headerFont = FontFactory.GetFont(FontFactory.COURIER_BOLD, 18);
+
+                    Paragraph labelHeader = new Paragraph("VISITOR LIST", headerFont);
+                    labelHeader.Alignment = Element.ALIGN_CENTER;
+                    labelHeader.SpacingAfter = 20;
+                    document.Add(labelHeader);
+
+
+                    PdfPTable table = new PdfPTable(dt.Columns.Count);
+                    float[] widths = new float[] { 4f, 4f, 4f, 4f, 4f, 4f, 4f, 4f, 4f, 4f, 4f, 4f, 4f, 4f, 4f };
+                    table.SetWidths(widths);
+                    table.WidthPercentage = 100;
+
+                    PdfPCell cell = new PdfPCell(new Phrase("Visitors"));
+
+                    cell.Colspan = dt.Columns.Count;
+
+                    foreach (DataColumn c in dt.Columns)
+                    {
+
+                        String NewName = c.ColumnName;
+                        String revisedName = "";
+                        switch (NewName)
+                        {
+                            case "idVisitor":
+                                revisedName = "Visitor's ID";
+                                break;
+                            case "firstName":
+                                revisedName = "First Name";
+                                break;
+                            case "lastName":
+                                revisedName = "Last Name";
+                                break;
+                            case "gender":
+                                revisedName = "Gender";
+                                break;
+                            case "unitNumber":
+                                revisedName = "Unit Number";
+                                break;
+                            case "idDetails":
+                                revisedName = "ID Detail";
+                                break;
+                            case "visitorRelation":
+                                revisedName = "Relation to Owner";
+                                break;
+                            case "purposeOfVisit":
+                                revisedName = "Purpose Of Visit";
+                                break;
+                            case "timeIn":
+                                revisedName = "Time In";
+                                break;
+                            case "timeOut":
+                                revisedName = "Time Out";
+                                break;
+                            case "idOwner":
+                                revisedName = "Owner's ID";
+                                break;
+                            case "idFacilitator":
+                                revisedName = "Facilitator's ID";
+                                break;
+                            case "ownerLastName":
+                                revisedName = "Unit Owner(Last Name)";
+                                break;
+                            case "ownerFirstName":
+                                revisedName = "Unit Owner(First Name)";
+                                break;
+                            case "facilitatorLastName":
+                                revisedName = "Facilitator(Last Name)";
+                                break;
+                            default:
+                                break;
+
+                        }
+                        PdfPCell labeledCell = new PdfPCell(new Phrase(revisedName, font6));
+                        labeledCell.HorizontalAlignment = PdfPCell.ALIGN_CENTER;
+                        labeledCell.BackgroundColor = new BaseColor(35, 197, 227);
+                        labeledCell.Padding = 4;
+
+                        table.AddCell(labeledCell);
+
+                        //table.AddCell(new Phrase(c.ColumnName, font5));
+                    }
+
+                    foreach (DataRow r in dt.Rows)
+                    {
+                        if (dt.Rows.Count > 0)
+                        {
+                            table.AddCell(new Phrase(r[0].ToString(), font5));
+                            table.AddCell(new Phrase(r[1].ToString(), font5));
+                            cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                            table.AddCell(new Phrase(r[2].ToString(), font5));
+                            table.AddCell(new Phrase(r[3].ToString(), font5));
+                            cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                            table.AddCell(new Phrase(r[4].ToString(), font5));
+                            table.AddCell(new Phrase(r[5].ToString(), font5));
+                            cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                            table.AddCell(new Phrase(r[6].ToString(), font5));
+                            table.AddCell(new Phrase(r[7].ToString(), font5));
+                            cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                            table.AddCell(new Phrase(r[8].ToString(), font5));
+                            table.AddCell(new Phrase(r[9].ToString(), font5));
+                            cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                            table.AddCell(new Phrase(r[10].ToString(), font5));
+                            table.AddCell(new Phrase(r[11].ToString(), font5));
+                            cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                            table.AddCell(new Phrase(r[12].ToString(), font5));
+                            table.AddCell(new Phrase(r[13].ToString(), font5));
+                            cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                            table.AddCell(new Phrase(r[14].ToString(), font5));
+                            cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                        }
+                    }
+                    document.Add(table);
+                    document.Close();
+                }
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            disableTimeOutBtnChecker();
+        }
+
+        private void disableTimeOutBtnChecker()
+        {
+            int visitorID = Convert.ToInt32(dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value.ToString());
+            string timeOut = (String)visitor1TableAdapter.GetTimeOutQuery(visitorID);
+            if (string.IsNullOrEmpty(timeOut))
+            {
+                btnTimeOut.Enabled = true;
+            }
+            else
+            {
+                btnTimeOut.Enabled = false;
+            }
+        }
     }
+
+    
 }
