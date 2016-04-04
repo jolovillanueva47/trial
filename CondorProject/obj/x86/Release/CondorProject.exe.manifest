@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CondorProject.exe" size="9938944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CondorProject.exe" size="9913344">
       <assemblyIdentity name="CondorProject" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>kOSoq89sjyP/MxjNt+M9Yk4MeFw=</dsig:DigestValue>
+        <dsig:DigestValue>DvYUpw8OjlDkqDQkdqLKyfekJeA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
