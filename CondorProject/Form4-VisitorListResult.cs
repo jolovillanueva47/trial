@@ -51,7 +51,7 @@ namespace CondorProject
             
             tmr.Start();
 
-            
+            txtFacilitator.Text = facilitatorTableAdapter1.GetFacilitatorQuery(id).ToString();
             
             //this.visitor1TableAdapter.Fill(this.condorDatabaseDataSet.Visitor1);
             //visitor1TableAdapter.GetDay(time);
@@ -113,7 +113,8 @@ namespace CondorProject
             {
                 int visitorID = Convert.ToInt32(dataGridView1.Rows[dataGridView1.SelectedRows[0].Index].Cells[0].Value.ToString());
                 visitor1TableAdapter.UpdateTimeOutQuery1(lblDateAndTime.Text, visitorID);
-                visitor1TableAdapter.Fill(condorDatabaseDataSet.Visitor1);
+                //visitor1TableAdapter.Fill(condorDatabaseDataSet.Visitor1);
+                visitor1TableAdapter.FillDay(condorDatabaseDataSet.Visitor1, DateTime.Now.ToString("MM/dd/yyyy"));
                 MessageBox.Show("Successfully timed out visitor.");
             }
 
@@ -327,19 +328,22 @@ namespace CondorProject
             if (comboBox1.SelectedIndex == 0)
             {
                 datePicker1.CustomFormat = "MM/dd/yyyy";
-                datePicker1.Visible = true;
-                datePicker1.Enabled = true;
+                datePicker1.Visible = false;
+                datePicker1.Enabled = false;
                 label1.Visible = false;
                 datePicker2.Visible = false;
+                label4.Visible = false;
 
             }
             else if (comboBox1.SelectedIndex == 1)
             {
                 datePicker1.CustomFormat = "MM/dd/yyyy";
+                datePicker1.Visible = true;
                 datePicker1.Enabled = true;
                 datePicker2.Enabled = false;
                 label1.Visible = true;
                 datePicker2.Visible = true;
+                label4.Visible = true;
 
             }
             else if (comboBox1.SelectedIndex == 2)
@@ -367,6 +371,29 @@ namespace CondorProject
         {
 
         }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0) //Daily
+            {
+                visitor1TableAdapter.FillDay(condorDatabaseDataSet.Visitor1, DateTime.Now.ToString("MM/dd/yyyy"));
+            }
+            else if (comboBox1.SelectedIndex == 1) //Weekly
+            {
+                //exportToPDF(visitor1TableAdapter.GetWeek(datePicker1.Text, datePicker2.Text));
+                visitor1TableAdapter.FillWeek(condorDatabaseDataSet.Visitor1, datePicker1.Text, datePicker2.Text);
+               
+            }
+            else if (comboBox1.SelectedIndex == 2) //Monthly
+            {
+                string[] myMonth = datePicker1.Text.Split('/');
+                //exportToPDF(visitor1TableAdapter.GetMonth(myMonth[0], myMonth[1]));
+                visitor1TableAdapter.FillMonth(condorDatabaseDataSet.Visitor1, myMonth[0], myMonth[1]);
+                
+            }
+        }
+
+      
 
         
     }
