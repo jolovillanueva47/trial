@@ -94,14 +94,14 @@
             this.passwordDataGridViewTextBoxColumn,
             this.userNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.facilitatorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 159);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 129);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(672, 359);
+            this.dataGridView1.Size = new System.Drawing.Size(504, 292);
             this.dataGridView1.TabIndex = 0;
             // 
             // idFacilitatorDataGridViewTextBoxColumn
@@ -138,12 +138,11 @@
             // 
             this.btnCreate.BackColor = System.Drawing.Color.Maroon;
             this.btnCreate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCreate.BackgroundImage")));
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(723, 158);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreate.Location = new System.Drawing.Point(542, 128);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(431, 44);
+            this.btnCreate.Size = new System.Drawing.Size(323, 36);
             this.btnCreate.TabIndex = 44;
             this.btnCreate.Text = "CREATE";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -153,12 +152,11 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.Maroon;
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(723, 210);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Location = new System.Drawing.Point(542, 171);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(431, 44);
+            this.btnUpdate.Size = new System.Drawing.Size(323, 36);
             this.btnUpdate.TabIndex = 43;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -168,12 +166,11 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Maroon;
             this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(723, 262);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(542, 213);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(431, 44);
+            this.btnDelete.Size = new System.Drawing.Size(323, 36);
             this.btnDelete.TabIndex = 45;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -182,10 +179,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(37, 518);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(28, 421);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(672, 154);
+            this.pictureBox1.Size = new System.Drawing.Size(504, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
@@ -194,12 +190,11 @@
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Maroon;
             this.btnLogout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.BackgroundImage")));
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(723, 582);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Location = new System.Drawing.Point(542, 473);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(431, 44);
+            this.btnLogout.Size = new System.Drawing.Size(323, 36);
             this.btnLogout.TabIndex = 48;
             this.btnLogout.Text = "LOG-OUT";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -209,13 +204,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.MintCream;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("dark forest", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SlateGray;
-            this.label3.Location = new System.Drawing.Point(-11, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(-8, 26);
             this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(307, 0, 307, 0);
-            this.label3.Size = new System.Drawing.Size(1344, 58);
+            this.label3.Padding = new System.Windows.Forms.Padding(230, 0, 230, 0);
+            this.label3.Size = new System.Drawing.Size(900, 51);
             this.label3.TabIndex = 49;
             this.label3.Text = "FACILITATOR ACCOUNT LIST";
             // 
@@ -223,14 +217,13 @@
             // 
             this.lblDateAndTime.AutoSize = true;
             this.lblDateAndTime.BackColor = System.Drawing.Color.MintCream;
-            this.lblDateAndTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F);
+            this.lblDateAndTime.Font = new System.Drawing.Font("dark forest", 23.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateAndTime.ForeColor = System.Drawing.Color.SlateGray;
             this.lblDateAndTime.Image = ((System.Drawing.Image)(resources.GetObject("lblDateAndTime.Image")));
-            this.lblDateAndTime.Location = new System.Drawing.Point(728, 326);
-            this.lblDateAndTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDateAndTime.Location = new System.Drawing.Point(546, 265);
             this.lblDateAndTime.Name = "lblDateAndTime";
-            this.lblDateAndTime.Padding = new System.Windows.Forms.Padding(0, 12, 0, 12);
-            this.lblDateAndTime.Size = new System.Drawing.Size(444, 68);
+            this.lblDateAndTime.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.lblDateAndTime.Size = new System.Drawing.Size(319, 60);
             this.lblDateAndTime.TabIndex = 50;
             this.lblDateAndTime.Text = "MM/dd/yyyy hh:mm:ss tt";
             this.lblDateAndTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,12 +232,11 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Maroon;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("dark forest", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(723, 633);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(542, 514);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(431, 44);
+            this.button1.Size = new System.Drawing.Size(323, 36);
             this.button1.TabIndex = 51;
             this.button1.Text = "EXIT";
             this.button1.UseVisualStyleBackColor = false;
@@ -253,19 +245,18 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-16, -10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(-12, -8);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1205, 714);
+            this.pictureBox2.Size = new System.Drawing.Size(904, 580);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
             // Form6_FacilitatorList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1187, 699);
+            this.ClientSize = new System.Drawing.Size(890, 568);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblDateAndTime);
@@ -279,7 +270,7 @@
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form6_FacilitatorList";

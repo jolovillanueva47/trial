@@ -51,7 +51,7 @@ namespace CondorProject
             
             tmr.Start();
 
-            txtFacilitator.Text = facilitatorTableAdapter1.GetFacilitatorQuery(id).ToString();
+            txtFacilitator.Text = "Welcome " + facilitatorTableAdapter1.GetFacilitatorFirstNameQuery(id).ToString();
             
             //this.visitor1TableAdapter.Fill(this.condorDatabaseDataSet.Visitor1);
             //visitor1TableAdapter.GetDay(time);
