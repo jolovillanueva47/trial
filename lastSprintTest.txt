@@ -1,7 +1,0 @@
--Generate PDF: weekly report
--cheker: overwrite path
--tabControl for day,week, month report (TABS)
--option: (label) specific month only
--form behind the current form should not be accessed; use show dialog  
--finalize UI	
--in name search, unit owner(lastname, firstname) and facilitator name do not not appear
